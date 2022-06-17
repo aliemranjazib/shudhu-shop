@@ -18,7 +18,7 @@ class CustomButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: onPress,
       child: Container(
         height: 60,
         margin: EdgeInsets.all(17),
@@ -36,7 +36,11 @@ class CustomButton extends StatelessWidget {
                 ),
               ),
             ),
-            Visibility(visible: isLoading!, child: CircularProgressIndicator()),
+            Visibility(
+                visible: isLoading!,
+                child: CircularProgressIndicator(
+                  color: Colors.white,
+                )),
           ],
         )),
         decoration: BoxDecoration(

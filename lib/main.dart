@@ -1,10 +1,26 @@
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:sidh_shop/landing_screen.dart';
+import 'package:sidh_shop/layout_screen.dart';
 import 'package:sidh_shop/screens/auth_screen/login_screen.dart';
 import 'package:sidh_shop/screens/homeScreen.dart';
 import 'package:sidh_shop/services/routeGenerator.dart';
 // import 'package:sidh_shop/screens/initial_screen.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  if (kIsWeb) {
+    await Firebase.initializeApp(
+        options: FirebaseOptions(
+            apiKey: "AIzaSyDW_KSVFcn5Udjli7YM7nccS7N8UqChWgk",
+            authDomain: "sidhu-shop.firebaseapp.com",
+            projectId: "sidhu-shop",
+            storageBucket: "sidhu-shop.appspot.com",
+            messagingSenderId: "1092043600371",
+            appId: "1:1092043600371:web:88303552bafe1e7ad06286"));
+  }
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
@@ -19,7 +35,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: LoginScreen(),
+      home: LandingScreen(),
       onGenerateRoute: RouteGeneator().generateRoute,
     );
   }

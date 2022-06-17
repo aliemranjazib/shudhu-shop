@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1092043600371",
+    "project_id": "sidhu-shop",
+    "storage_bucket": "sidhu-shop.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1092043600371:android:f1f37424eb40c345d06286",
+        "android_client_info": {
+          "package_name": "com.example.sidh_shop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1092043600371-71k2b8nass55in5pqg09j2jl6ba9tui3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGEZkbnGP3pMFCBeMmTGOkdf97gRpr1dE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1092043600371-71k2b8nass55in5pqg09j2jl6ba9tui3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
