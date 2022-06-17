@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:sidh_shop/utils/routes.dart';
 import 'package:sidh_shop/widgets/customButton.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+class SellerHomeScreen extends StatelessWidget {
+  const SellerHomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,13 +13,13 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("HOME SCREEN"),
+            Text(" SELLER HOME SCREEN"),
             CustomButton(
               title: "SIGNOUT",
               isLoginButton: true,
               onPress: () {
                 FirebaseAuth.instance.signOut();
-                Navigator.pushReplacementNamed(context, Routes.LOGIN);
+                Navigator.pushReplacementNamed(context, Routes.MAIN);
               },
             )
           ],

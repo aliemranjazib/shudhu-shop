@@ -2,8 +2,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:sidh_shop/screens/auth_screen/login_screen.dart';
-import 'package:sidh_shop/screens/homeScreen.dart';
+// import 'package:sidh_shop/screens/auth_screen/login_screen.dart';
+import 'package:sidh_shop/screens/user_side/screens/homeScreen.dart';
+import 'package:sidh_shop/screens/main_screen.dart';
 
 class LandingScreen extends StatelessWidget {
   // const LandingScreen({super.key});
@@ -35,7 +36,7 @@ class LandingScreen extends StatelessWidget {
               if (streamShot.connectionState == ConnectionState.active) {
                 User? user = streamShot.data;
                 if (user == null) {
-                  return LoginScreen();
+                  return MainScreen();
                 } else {
                   return HomeScreen();
                 }

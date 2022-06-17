@@ -3,9 +3,11 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:sidh_shop/landing_screen.dart';
 import 'package:sidh_shop/layout_screen.dart';
-import 'package:sidh_shop/screens/auth_screen/login_screen.dart';
-import 'package:sidh_shop/screens/homeScreen.dart';
+// import 'package:sidh_shop/screens/auth_screen/login_screen.dart';
+import 'package:sidh_shop/screens/user_side/screens/homeScreen.dart';
+import 'package:sidh_shop/services/cacher_service.dart';
 import 'package:sidh_shop/services/routeGenerator.dart';
+import 'package:sizer/sizer.dart';
 // import 'package:sidh_shop/screens/initial_screen.dart';
 
 void main() async {
@@ -21,6 +23,7 @@ void main() async {
             appId: "1:1092043600371:web:88303552bafe1e7ad06286"));
   }
   await Firebase.initializeApp();
+  await MyPrefferences.init();
   runApp(const MyApp());
 }
 
@@ -30,13 +33,15 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Sidhu App',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: LandingScreen(),
-      onGenerateRoute: RouteGeneator().generateRoute,
-    );
+    return Sizer(builder: (context, orientation, deviceType) {
+      return MaterialApp(
+        title: 'Sidhu App',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: LandingScreen(),
+        onGenerateRoute: RouteGeneator().generateRoute,
+      );
+    });
   }
 }

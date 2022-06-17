@@ -6,13 +6,13 @@ import 'package:sidh_shop/widgets/customButton.dart';
 import 'package:sidh_shop/widgets/custom_dialogue.dart';
 import 'package:sidh_shop/widgets/custom_textField.dart';
 
-class LoginScreen extends StatefulWidget {
+class SellerLoginScreen extends StatefulWidget {
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<SellerLoginScreen> createState() => _SellerLoginScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
-  // const LoginScreen({Key? key}) : super(key: key);
+class _SellerLoginScreenState extends State<SellerLoginScreen> {
+  // const SellerLoginScreen({Key? key}) : super(key: key);
   TextEditingController emailC = TextEditingController();
 
   TextEditingController passwordC = TextEditingController();
@@ -30,6 +30,9 @@ class _LoginScreenState extends State<LoginScreen> {
       String? accountStatus =
           await AuthService.signIn(emailC.text, passwordC.text);
       if (accountStatus != null) {
+        setState(() {
+          formStateLoading = false;
+        });
         showDialog(
             context: context,
             builder: ((context) {
@@ -37,11 +40,8 @@ class _LoginScreenState extends State<LoginScreen> {
                 text: accountStatus,
               );
             }));
-        setState(() {
-          formStateLoading = false;
-        });
       } else {
-        Navigator.pushReplacementNamed(context, Routes.HOME);
+        Navigator.pushReplacementNamed(context, Routes.SELLERHOME);
       }
     }
   }
