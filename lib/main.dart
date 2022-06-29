@@ -8,8 +8,9 @@ import 'package:sidh_shop/screens/user_side/screens/homeScreen.dart';
 import 'package:sidh_shop/services/cacher_service.dart';
 import 'package:sidh_shop/services/routeGenerator.dart';
 import 'package:sizer/sizer.dart';
-// import 'package:sidh_shop/screens/initial_screen.dart';
 
+// import 'package:sidh_shop/screens/initial_screen.dart';
+///nrf4rtiugt5ihgm5yiohm6yjokummm
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   if (kIsWeb) {
