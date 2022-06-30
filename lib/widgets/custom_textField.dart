@@ -8,6 +8,7 @@ class CustomTextField extends StatelessWidget {
   Widget? icon;
   String? Function(String?)? validation;
   int? maxLine;
+  String? labeltext;
   bool? isPassword = false;
   CustomTextField(
       {this.controller,
@@ -15,6 +16,7 @@ class CustomTextField extends StatelessWidget {
       this.icon,
       this.isPassword = false,
       this.maxLine,
+      this.labeltext,
       this.validation});
 
   @override
@@ -32,6 +34,7 @@ class CustomTextField extends StatelessWidget {
           validator: validation,
           decoration: InputDecoration(
             suffixIcon: icon,
+            labelText: labeltext,
             border: InputBorder.none,
             hintText: hintText ?? "enter hint",
             contentPadding: EdgeInsets.all(15),

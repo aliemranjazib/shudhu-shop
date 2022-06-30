@@ -47,7 +47,7 @@ class CustomButton extends StatelessWidget {
           border: Border.all(
             color: isLoginButton == true ? Colors.transparent : Colors.black,
           ),
-          color: isLoginButton == true ? Colors.deepPurple : Colors.white,
+          color: isLoginButton == true ? Colors.green : Colors.white,
           borderRadius: BorderRadius.circular(10),
         ),
       ),

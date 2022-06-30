@@ -68,6 +68,7 @@ class _SellerLoginScreenState extends State<SellerLoginScreen> {
                   children: [
                     CustomTextField(
                       controller: emailC,
+                      labeltext: "Email",
                       hintText: "enter your email",
                       validation: (v) {
                         if (v!.isEmpty) {
@@ -78,6 +79,7 @@ class _SellerLoginScreenState extends State<SellerLoginScreen> {
                     ),
                     CustomTextField(
                       controller: passwordC,
+                      labeltext: "Password",
                       hintText: "enter your password",
                       validation: (v) {
                         if (v!.isEmpty) {

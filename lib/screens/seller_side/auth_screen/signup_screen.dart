@@ -17,6 +17,8 @@ class _SellerSignupScreenState extends State<SellerSignupScreen> {
   TextEditingController emailC = TextEditingController();
   TextEditingController userNameC = TextEditingController();
   TextEditingController passwordC = TextEditingController();
+  TextEditingController phonc = TextEditingController();
+  TextEditingController repasswordC = TextEditingController();
 
   final formkey = GlobalKey<FormState>();
 
@@ -77,6 +79,7 @@ class _SellerSignupScreenState extends State<SellerSignupScreen> {
                 child: Column(
                   children: [
                     CustomTextField(
+                      labeltext: "Email",
                       controller: userNameC,
                       hintText: "enter your name",
                       validation: (v) {
@@ -97,7 +100,37 @@ class _SellerSignupScreenState extends State<SellerSignupScreen> {
                       },
                     ),
                     CustomTextField(
+                      controller: phonc,
+                      hintText: "enter your Phone Number",
+                      validation: (v) {
+                        if (v!.isEmpty) {
+                          return "not be empty";
+                        }
+                        return null;
+                      },
+                    ),
+                    CustomTextField(
+                      controller: emailC,
+                      hintText: "enter your email",
+                      validation: (v) {
+                        if (v!.isEmpty) {
+                          return "not be empty";
+                        }
+                        return null;
+                      },
+                    ),
+                    CustomTextField(
                       controller: passwordC,
+                      hintText: "enter your password",
+                      validation: (v) {
+                        if (v!.isEmpty) {
+                          return "not be empty";
+                        }
+                        return null;
+                      },
+                    ),
+                    CustomTextField(
+                      controller: repasswordC,
                       hintText: "enter your password",
                       validation: (v) {
                         if (v!.isEmpty) {
