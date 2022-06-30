@@ -5,6 +5,9 @@ import 'package:sidh_shop/landing_screen.dart';
 import 'package:sidh_shop/layout_screen.dart';
 // import 'package:sidh_shop/screens/auth_screen/login_screen.dart';
 import 'package:sidh_shop/screens/user_side/screens/homeScreen.dart';
+import 'package:sidh_shop/screens/web_site/seller_side/screens/add_products_screen.dart';
+import 'package:sidh_shop/screens/web_site/seller_side/screens/dashboard_screen.dart';
+import 'package:sidh_shop/screens/web_site/seller_side/screens/seller_home_screen.dart';
 import 'package:sidh_shop/services/cacher_service.dart';
 import 'package:sidh_shop/services/routeGenerator.dart';
 import 'package:sizer/sizer.dart';
@@ -42,6 +45,12 @@ class MyApp extends StatelessWidget {
         ),
         home: LandingScreen(),
         onGenerateRoute: RouteGeneator().generateRoute,
+        routes: {
+          SellerHomeScreen.id: (context) => SellerHomeScreen(),
+          DashBoardScreen.id: (context) => DashBoardScreen(),
+          AddProductScreen.id: (context) => AddProductScreen(),
+          // SellerHomeScreen.id:(context) => SellerHomeScreen(),
+        },
       );
     });
   }

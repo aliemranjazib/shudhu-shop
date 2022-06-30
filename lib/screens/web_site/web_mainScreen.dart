@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sidh_shop/screens/web_site/seller_side/auth_screen/login_screen.dart';
 
 class WebMainScreen extends StatelessWidget {
   const WebMainScreen({Key? key}) : super(key: key);
@@ -6,8 +7,13 @@ class WebMainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text("WEB MAIN SCREEN"),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Text("WEB MAIN SCREEN"),
+            SellerLoginScreen(),
+          ],
+        ),
       ),
     );
   }

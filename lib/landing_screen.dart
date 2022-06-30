@@ -2,6 +2,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:sidh_shop/layout_screen.dart';
+import 'package:sidh_shop/screens/web_site/seller_side/screens/seller_home_screen.dart';
 // import 'package:sidh_shop/screens/auth_screen/login_screen.dart';
 import 'package:sidh_shop/screens/user_side/screens/homeScreen.dart';
 import 'package:sidh_shop/screens/main_screen.dart';
@@ -36,9 +38,18 @@ class LandingScreen extends StatelessWidget {
               if (streamShot.connectionState == ConnectionState.active) {
                 User? user = streamShot.data;
                 if (user == null) {
-                  return MainScreen();
-                } else {
-                  return HomeScreen();
+                  return LayoutScreen();
+                } else if (user.uid.isNotEmpty) {
+                  return LayoutBuilder(
+                    builder:
+                        (BuildContext context, BoxConstraints constraints) {
+                      if (constraints.minWidth > 600) {
+                        return SellerHomeScreen();
+                      } else {
+                        return HomeScreen();
+                      }
+                    },
+                  );
                 }
               }
 

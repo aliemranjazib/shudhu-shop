@@ -6,4 +6,5 @@ class Routes {
   static const String SELLERHOME = "/shsignup";
   static const String HOME = "/home";
   static const String MAIN = "/main";
+  static const String WEBMAIN = "/webmain";
 }

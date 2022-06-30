@@ -3,11 +3,12 @@ import 'package:flutter/material.dart';
 
 import 'package:sidh_shop/screens/user_side/screens/homeScreen.dart';
 import 'package:sidh_shop/screens/main_screen.dart';
-import 'package:sidh_shop/screens/seller_side/auth_screen/login_screen.dart';
-import 'package:sidh_shop/screens/seller_side/auth_screen/signup_screen.dart';
-import 'package:sidh_shop/screens/seller_side/screens/seller_home_screen.dart';
+import 'package:sidh_shop/screens/web_site/seller_side/auth_screen/login_screen.dart';
+import 'package:sidh_shop/screens/web_site/seller_side/auth_screen/signup_screen.dart';
+import 'package:sidh_shop/screens/web_site/seller_side/screens/seller_home_screen.dart';
 import 'package:sidh_shop/screens/user_side/auth_screen/login_screen.dart';
 import 'package:sidh_shop/screens/user_side/auth_screen/signup_screen.dart';
+import 'package:sidh_shop/screens/web_site/web_mainScreen.dart';
 
 import '../utils/routes.dart';
 
@@ -28,6 +29,8 @@ class RouteGeneator {
         return MaterialPageRoute(builder: (_) => SellerHomeScreen());
       case Routes.MAIN:
         return MaterialPageRoute(builder: (_) => MainScreen());
+      case Routes.WEBMAIN:
+        return MaterialPageRoute(builder: (_) => WebMainScreen());
 
       default:
         return MaterialPageRoute(
