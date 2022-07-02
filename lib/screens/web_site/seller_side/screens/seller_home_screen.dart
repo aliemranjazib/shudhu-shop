@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_admin_scaffold/admin_scaffold.dart';
 import 'package:sidh_shop/screens/web_site/seller_side/screens/add_products_screen.dart';
 import 'package:sidh_shop/screens/web_site/seller_side/screens/dashboard_screen.dart';
+import 'package:sidh_shop/screens/web_site/seller_side/screens/update_date_screen.dart';
 import 'package:sidh_shop/utils/routes.dart';
 import 'package:sidh_shop/widgets/customButton.dart';
 
@@ -27,6 +28,11 @@ class _SellerHomeScreenState extends State<SellerHomeScreen> {
       case AddProductScreen.id:
         setState(() {
           selectedRoute = AddProductScreen();
+        });
+        break;
+      case UpdateProductScreen.id:
+        setState(() {
+          selectedRoute = UpdateProductScreen();
         });
         break;
       default:
@@ -55,6 +61,10 @@ class _SellerHomeScreenState extends State<SellerHomeScreen> {
               title: 'ADD PRODUCT',
               icon: Icons.add,
               route: AddProductScreen.id),
+          AdminMenuItem(
+              title: 'UPDATE PRODUCT',
+              icon: Icons.update,
+              route: UpdateProductScreen.id),
         ],
       ),
       body: selectedRoute,

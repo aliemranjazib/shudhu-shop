@@ -6,6 +6,11 @@ class AppStyle {
     fontSize: 19,
     fontWeight: FontWeight.bold,
   );
+
+  static const h1 = TextStyle(
+    fontSize: 19,
+    fontWeight: FontWeight.bold,
+  );
   static final boxstyle = BoxDecoration(
     borderRadius: BorderRadius.circular(10),
     color: Colors.deepPurpleAccent,

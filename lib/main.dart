@@ -8,6 +8,7 @@ import 'package:sidh_shop/screens/user_side/screens/homeScreen.dart';
 import 'package:sidh_shop/screens/web_site/seller_side/screens/add_products_screen.dart';
 import 'package:sidh_shop/screens/web_site/seller_side/screens/dashboard_screen.dart';
 import 'package:sidh_shop/screens/web_site/seller_side/screens/seller_home_screen.dart';
+import 'package:sidh_shop/screens/web_site/seller_side/screens/update_date_screen.dart';
 import 'package:sidh_shop/services/cacher_service.dart';
 import 'package:sidh_shop/services/routeGenerator.dart';
 import 'package:sizer/sizer.dart';
@@ -49,6 +50,7 @@ class MyApp extends StatelessWidget {
           SellerHomeScreen.id: (context) => SellerHomeScreen(),
           DashBoardScreen.id: (context) => DashBoardScreen(),
           AddProductScreen.id: (context) => AddProductScreen(),
+          UpdateProductScreen.id: (context) => UpdateProductScreen()
           // SellerHomeScreen.id:(context) => SellerHomeScreen(),
         },
       );

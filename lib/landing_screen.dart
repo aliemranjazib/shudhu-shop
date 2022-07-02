@@ -6,7 +6,7 @@ import 'package:sidh_shop/layout_screen.dart';
 import 'package:sidh_shop/screens/web_site/seller_side/screens/seller_home_screen.dart';
 // import 'package:sidh_shop/screens/auth_screen/login_screen.dart';
 import 'package:sidh_shop/screens/user_side/screens/homeScreen.dart';
-import 'package:sidh_shop/screens/main_screen.dart';
+import 'package:sidh_shop/main_screen.dart';
 
 class LandingScreen extends StatelessWidget {
   // const LandingScreen({super.key});
